@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Preview</title>
+  <style>
+    /* Add your existing CSS here or link an external stylesheet */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .toolbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      z-index: 1000;
+    }
+    .toolbar button {
+      margin: 0 5px;
+      padding: 10px 20px;
+      background: #555;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+    .toolbar button:hover {
+      background: #777;
+    }
+    .toolbar button.active {
+      background: #007bff;
+    }
+    .preview {
+      margin-top: 50px; /* To avoid overlapping with the toolbar */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 90vh;
+      max-width: 1200px; /* Default to desktop width */
+      transition: width 0.3s ease;
+    }
+  </style>
+  <!-- head tag of box-four.html -->
+      <title>Handicraft  - Responsive HTML Template</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <meta name="description" content="" />
+      <meta name="keywords" content="">
+      <meta name="author" content="" />
+      <meta name="MobileOptimized" content="320">
+      <!-- favicon links-->
+      <link rel="icon" type="image/icon" href="assets/images/favicon.png" />
+      <!-- main css -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="assets/css/REDUCED-font-awesome.css" />
+      <link rel="stylesheet" href="assets/js/plugin/owl/REDUCED-owl.carousel.css" />
+      <!--revolution-->
+      <link href="assets/js/plugin/revolution/css/settings.css" rel="stylesheet" type="text/css">
+      <link href="assets/js/plugin/revolution/css/layers.css" rel="stylesheet" type="text/css">
+      <link href="assets/js/plugin/revolution/css/navigation.css" rel="stylesheet" type="text/css">
+  
+      <link rel="stylesheet" href="REDUCED-style.css" media="screen" />
+  
+</head>
+<body>
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <button data-size="1200" class="active">Desktop</button>
+    <button data-size="768">Tablet</button>
+    <button data-size="375">Mobile</button>
+    <button data-size="full">Reset Full Width</button> <!-- Reset button -->
+  </div>
+
+  <!-- Preview Area -->
+  <div class="preview">
+    <iframe src="" id="previewFrame"></iframe>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.toolbar button');
+    const iframe = document.getElementById('previewFrame');
+
+    // Load the current page URL into the iframe
+    iframe.src = window.location.href;
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button (except for Reset)
+        if (button.getAttribute('data-size') !== 'full') {
+          button.classList.add('active');
+        }
+
+        // Update iframe width based on button data-size
+        const size = button.getAttribute('data-size');
+        if (size === 'full') {
+          iframe.style.maxWidth = 'none'; // Remove any max-width restrictions
+        } else {
+          iframe.style.maxWidth = size + 'px'; // Set max-width for specified size
+        }
+      });
+    });
+  </script>
+  <div style="display: none;">
+  <!-- YOUR EXISTING WEBSITE CODE -->
+  <div class="boxed box_style3">
+    <!--preloader-->
+    <!--style switcher-->
+    <!--main wrapper start-->
+    <div id="wrapper">
+        <!--top_header start-->
+        <div class="hm_home_style1 hm_home_style3">
+            <!--menu start-->
+            <div class="hm_menu_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="hm_logo">
+                                <a href="#"><img src="assets/images/logo/silver-logo-139by69.webp" alt="Santa-Fe-Sterling" class="img-fluid"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8">
+                            <div class="hm_menu_wrap">
+							
+									<div class="menu_btn"><span></span><span></span><span></span></div>
+									<div class="hm_menu">
+										<ul>
+											<li class="active dropdown"><a href="#">home</a>
+											</li>
+											<li><a href="#">about</a></li>
+											<li><a href="#">Our Products</a></li>
+											<li class="dropdown"><a href="#">Our Locations</a>
+												<ul class="sub-menu">
+                                                    <li><a href="#nav-menu-redirect-1" class="nav-link" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Enchantment T's (Warehouse)</a></li>
+                                                    <li><a href="#nav-menu-redirect-2" class="nav-link" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Hotel Albuquerque Gift Shop</a></li>
+                                                    <li><a href="#nav-menu-redirect-3" class="nav-link" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Hotel Encanto Gift Shop</a></li>
+                                                    <li><a href="#nav-menu-redirect-4" class="nav-link" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">Old Town T-Shirt Company</a></li>
+                                                    <li><a href="#nav-menu-redirect-5" class="nav-link" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">Wild West T's and Gifts</a></li>
+												</ul>
+											</li>
+											<li class="dropdown"><a href="#">blog</a>
+											</li>
+											<li class="dropdown"><a href="#">Gallery</a>
+
+											</li>
+											<li><a href="#">contact</a></li>
+										</ul>
+									</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--banner start-->
+            <div class="hm_banner_wrapper">
+                <div id="rev_slider_1068_2_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="levano4export" data-source="gallery" style="background-color:transparent;padding:0px;">
+                    <div id="rev_slider_1068_2" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.3.0.2">
+                        <ul>
+                            <li data-index="rs-3010" data-transition="boxfade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="1000" data-thumb="" data-rotate="0" data-fstransition="boxfade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off" data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                <!-- MAIN IMAGE -->
+                                <div class="tp-caption tp-shape tp-shapewrapper " id="slide-2800-layer-7" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"opacity:0;","speed":500,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"speed":5000,"to":"opacity:0;","ease":"Power4.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0, 0, 0, 0.60);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>
+                                <img src="assets//images/main-hero/interior-view-of-a-leather-shop-selling-belts-bra-2023-11-27-05-35-21-utc.jpg" alt="handmade-craft-slide1" data-lazyload="assets//images/main-hero/interior-view-of-a-leather-shop-selling-belts-bra-2023-11-27-05-35-21-utc.jpg" data-bgposition="center center" data-kenburns="on" data-duration="20000" data-ease="Power1.easeOut" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption sfb sfb tp-resizeme" data-x="center" data-y="center" data-hoffset="0" data-voffset="-200" data-speed="1500" data-start="1000" data-easing="easeOutBounce" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.3" data-endspeed="1200" data-fontsize="['40','30','20','20']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"}]' data-endeasing="Power4.easeIn" style="font-size:40px;line-height:140px;text-transform:capitalize;text-shadow: -4px 4px 3px rgba(51, 51, 51, 0.35);z-index:100;">
+                                    <h1 class="creative" style="font-family: 'Great Vibes', cursive;font-weight:400;letter-spacing:2px;">Locally Owned &amp; Operated</h1>
+                                </div>
+
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption sfb sfb tp-resizeme" data-x="center" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="1500" data-start="1000" data-easing="easeOutBounce" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.3" data-endspeed="1200" data-fontsize="['55','50','40','24']" data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"}]' data-endeasing="Power4.easeIn" style="font-size:55px;color:#FFFFFF;line-height:140px;text-transform:uppercase;font-weight:600;text-shadow: -4px 4px 3px rgba(51, 51, 51, 0.35);z-index:100;font-family: 'Roboto Slab', serif;letter-spacing:5px;">
+                                    Graphic T-shirts
+                                </div>
+
+                                <!-- LAYER NR. 2 -->
+                                <div class="tp-caption Restaurant-Cursive   tp-resizeme" id="slide-3010-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['20','20','20','20']" data-width="none" data-height="none" data-whitespace="nowrap" data-fontsize="['18','18','15','15']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap; line-height:26px;text-transform:left;font-family: 'Roboto', sans-serif;letter-spacing:0px;">
+                                    Proudly local, we bring you unique gifts, custom apparel, and authentic New Mexico charm.</div>
+
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption NotGeneric-SubTitle   tp-resizeme" id="slide-3045-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['120','120','120','120']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' data-textAlign="['center','left','left','left']" data-paddingtop="[25,0,0,0]" data-paddingright="[33,0,0,0]" data-paddingbottom="[10,0,0,0]" data-paddingleft="[33,0,0,0]" style="z-index: 6; white-space: nowrap;text-transform:capitalize;letter-spacing:1px;    font-family: 'Roboto', sans-serif;">
+                                    <a href="#" class="hm_btn" target="_blank" style="margin-right:10px;">Shop Now</a>
+                                    <a href="#" class="hm_btn2" target="_blank">Explore Custom Apparel</a>
+                                </div>
+
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption rev-scroll-btn int_scroll" id="slide-3010-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['77','77','77','77']" data-width="35" data-height="55" data-whitespace="nowrap" data-type="button" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"y:50px;opacity:0;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"y:50px;opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; min-width: 35px; max-width: 35px; max-width: 55px; max-width: 55px; white-space: nowrap; font-size: px; line-height: px; font-weight: 400;text-transform:left;border-color:rgba(255, 255, 255, 1.00);border-style:solid;border-width:3px;border-radius:23px 23px 23px 23px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+                                    <span>
+							</span>
+                                </div>
+
+                            </li>
+
+                            <!--Second slide-->
+                            <li data-index="rs-1698" data-transition="slideright" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Ken Burns">
+                                <div class="tp-caption tp-shape tp-shapewrapper " id="slide-2810-layer-7" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"opacity:0;","speed":500,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"speed":5000,"to":"opacity:0;","ease":"Power4.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0, 0, 0, 0.60);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>
+                                <!-- MAIN IMAGE -->
+                                <img src="assets//images/from-Google/Wild-West-T_s-&-Gifts-san-felipe-st-location-expanded.jpg" alt="handmade-craft-slide2" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0" data-offsetstart="-500 0" data-offsetend="500 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+
+                                <!--LAYER 1-->
+                                <div class="tp-caption sfb sfb tp-resizeme" data-x="65" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="1500" data-start="1000" data-easing="easeOutBounce" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.3" data-endspeed="1200" data-frames='[{"from":"x:[0];z:50%;rX:0deg;rY:45deg;rZ:45deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"}]' data-fontsize="['55','50','40','24']" data-endeasing="Power4.easeIn" style="font-size:55px;color:#FFFFFF;line-height:140px;text-transform:uppercase;font-weight:700;text-shadow: -4px 4px 3px rgba(51, 51, 51, 0.35);z-index:100;font-family: 'Roboto Slab', serif;letter-spacing:5px;">
+                                    Visit Us<br>
+                                </div>
+
+                 `               <!-- LAYER NR. 2 -->
+                                <div class="tp-caption sfb sfb tp-resizeme" data-x="65" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1500" data-start="1000" data-easing="easeInOutQuart" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.3" data-fontsize="['18','18','17','17']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]' data-endspeed="1200" data-endeasing="Power4.easeOut" style="z-index: 6; white-space: nowrap; line-height:26px;text-transform:left;font-family: 'Roboto', sans-serif;letter-spacing:0px;color:#ffffff;">
+                                    Discover our stores across Albuquerque and Las Cruces, offering local charm and one-of-a-kind finds.
+                                </div>
+
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption NotGeneric-SubTitle   tp-resizeme" id="slide-3046-layer-5" data-x="['65','65','65','65']" data-hoffset="['30','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['80','80','80','80']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2500,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' data-textAlign="['center','left','left','left']" data-paddingtop="[25,0,0,0]" data-paddingright="[33,0,0,0]" data-paddingbottom="[10,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap;text-transform:capitalize;letter-spacing:1px;font-family: 'Roboto', sans-serif;">
+                                    <a href="#" class="hm_btn" target="_blank" style="margin-right:10px;">Find a Store Near You</a>
+                                    <a href="#" class="hm_btn2" target="_blank">Get Directions</a>
+                                </div>
+                            </li>
+
+                            <!--Third slide-->
+                            <li data-index="rs-1699" data-transition="curtain-1" data-slotamount="1" data-masterspeed="1000" data-thumb="images/slider/slider-4-100x100.png" data-rotate="0" data-saveperformance="off" data-title="Slide">
+                                <!-- MAIN IMAGE -->
+                                <div class="tp-caption tp-shape tp-shapewrapper " id="slide-2801-layer-7" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"opacity:0;","speed":500,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"speed":5000,"to":"opacity:0;","ease":"Power4.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0, 0, 0, 0.60);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>
+                                <img src="assets/images/main-hero/t-shirt-wholeseller.jpg" alt="handmade-craft-slide3" data-lazyload="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+
+                                <!-- LAYER 1-->
+                                <div class="tp-caption sfb sfb tp-resizeme third-slide-css" data-x="center" data-y="center" data-hoffset="0" data-voffset="-70" data-speed="1500" data-easing="easeInOutQuart" data-splitin="none" data-splitout="none" data-fontsize="['55','50','40','23']" data-elementdelay="0.01" data-endelementdelay="0.3" data-endspeed="1200" data-transform_in="y:-30px;rX:70deg;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="1000" data-endeasing="Power4.easeIn" style="font-size:55px;color:#FFFFFF;line-height:50px;text-transform:uppercase;font-weight:700;text-shadow: -4px 4px 3px rgba(51, 51, 51, 0.35);z-index:100;font-family: 'Roboto Slab', serif;letter-spacing:5px;">
+                                    Partner With Us: <br> Wholesale Done Locally
+                                </div>
+
+                                <!-- LAYER NR. 2 -->
+                                <div class="tp-caption sfb sfb tp-resizeme" data-x="center" data-y="center" data-hoffset="0" data-voffset="10" data-speed="1500" data-start="1000" data-easing="easeInOutQuart" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.3" data-endspeed="1200" data-textAlign="['center','center','center','center']" data-fontsize="['18','18','17','17']" data-frames='[{"from":"opacity:0;","speed":500,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},{"speed":5000,"to":"opacity:0;","ease":"Power4.easeInOut"}]' data-endeasing="Power4.easeOut" style="z-index: 6; white-space: nowrap; line-height:26px;text-transform:left;font-family: 'Roboto', sans-serif;letter-spacing:0px;color:#ffffff;">
+                                    Bring authentic New Mexico designs to your store with our wholesale offerings.
+                                </div>
+
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption NotGeneric-SubTitle   tp-resizeme" id="slide-3047-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['100','100','100','100']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' data-textAlign="['center','left','left','left']" data-paddingtop="[25,0,0,0]" data-paddingright="[33,0,0,0]" data-paddingbottom="[10,0,0,0]" data-paddingleft="[33,0,0,0]" style="z-index: 6; white-space: nowrap;text-transform:capitalize;letter-spacing:1px;font-family: 'Roboto', sans-serif;">
+                                    <a href="#" class="hm_btn" target="_blank" style="margin-right:10px;">our services</a>
+                                    <a href="#" class="hm_btn2" target="_blank">contact us</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--About section start-->
+        <div class="hm_about_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="hm_about_img">
+                            <img src="assets/images/from-Google/cropped-Wild-West-T_s-&-Gifts-san-felipe-st-location-2.jpg" alt="handmade-craft-about" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="hm_about_data">
+                            <h1><span class="hm_color">Welcome</span> To Santa Fe Sterling</h1>
+                            <p>At Santa Fe Sterling, we take pride in being a locally owned business rooted in the vibrant culture of New Mexico. With four unique stores and a bustling warehouse, we&apos;ve built a reputation for delivering high-quality custom apparel, distinctive gifts, and unforgettable shopping experiences. From Albuquerque to Las Cruces, our stores reflect the spirit of the Southwest, offering products that are as authentic as the communities we serve.</p>
+                            <p>Beyond our retail offerings, we&apos;re proud to partner with local businesses through our wholesale services. Whether you&apos;re looking to stock your shelves with New Mexico-inspired designs or create custom apparel for your brand, our team is here to help. At Santa Fe Sterling, we combine hometown charm with exceptional service to meet the needs of every customer.</p>
+                            <a href="#" class="hm_btn">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--New Arrivals section start-->
+        <div class="hm_arrivals_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <h1 class="hm_heading"><span class="hm_color">Our</span> New Arrivals</h1>
+                    </div>
+                </div>
+                 <div class="new_pro_inner">
+                <div class="row">
+                        <!--1-->
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="new_pro_box">
+                                <div class="new_pro_img">
+                                    <a href="#"><img src="assets/images/products/Dried-Chillies.jpg" alt="handmade-craft-arrivals1" class="img-fluid" /></a>
+                                </div>
+                                <div class="new_pro_data">
+                                    <h3><a href="#">Dried New Mexico Chile</a></h3>
+                                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                    <div class="new_pro_data_dollar">
+                                        <span class="pro_price">$12 Only</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!--2-->
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="new_pro_box">
+                                <div class="new_pro_data">
+                                    <h3><a href="#">NM Pottery</a></h3>
+                                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                    <div class="new_pro_data_dollar">
+                                        <span class="pro_price">$16 Only</span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="new_pro_img">
+                                    <a href="#"><img src="assets/images/products/New-Mexico-Pottery.jpg" alt="handmade-craft-arrivals2" class="img-fluid" /></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--3-->
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="new_pro_box">
+                                <div class="new_pro_img">
+                                    <a href="#"><img src="assets/images/products/Turquoise-Jewelry.jpg" alt="handmade-craft-arrivals3" class="img-fluid" /></a>
+                                </div>
+                                <div class="new_pro_data">
+                                    <h3><a href="#">Turquoise Jewelry</a></h3>
+                                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                    <div class="new_pro_data_dollar">
+                                      <span class="pro_price">$12 Only</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Our Locations Section start-->
+        <div class="hm_choose_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        
+                    </div>
+                    <div class="col-lg-8 col-md-12 pull-right padding_left">
+                        <div class="hm_choose_data">
+                            <h1 class="hm_heading text-left"><span class="hm_orange">Our </span>Locations</h1>
+                            <div class="hm_choose_list">
+                                <!-- GPT code here-->
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <!-- Enchantment T's -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button id="nav-menu-redirect-1" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                <h4>Enchantment T's (Warehouse)</h4>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body d-flex align-items-start" style="background: white; padding: 10px; border-radius: 5px;">
+                                                <!-- Google Map Embed -->
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.500248895763!2d-106.58746212423388!3d35.194006472748455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8722742a6219d549%3A0xf11ccc02e909264c!2sSanta%20Fe%20Sterling!5e0!3m2!1sen!2sus!4v1732062460967!5m2!1sen!2sus"
+                                                    width="200"
+                                                    height="150"
+                                                    style="border:0; border-radius: 5px; margin-right: 15px;"
+                                                    allowfullscreen=""
+                                                    loading="lazy"
+                                                    referrerpolicy="no-referrer-when-downgrade">
+                                                </iframe>
+                                                <div class="location-address-and-phone-number">
+                                                    <a href="https://www.google.com/maps?q=9440+San+Mateo+Blvd+Ste+M,+Albuquerque,+NM+87113" target="_blank" class="text-primary">
+                                                        <i class="fa fa-map-marker"></i> 9440 San Mateo Blvd Ste M, Albuquerque, NM 87113
+                                                    </a><br>
+                                                    <a href="tel:+15058220900" class="text-dark"><i class="fa fa-phone"></i> 505-822-0900</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Hotel Albuquerque Gift Shop -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingTwo">
+                                            <button id="nav-menu-redirect-2" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                <h4>Hotel Albuquerque Gift Shop</h4>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body d-flex align-items-start" style="background: white; padding: 10px; border-radius: 5px;">
+                                                <!-- Google Map Embed -->
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.2528962579563!2d-106.67219852423796!3d35.100395472780285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8722732c606828b5%3A0x7d3417276e823031!2s800%20Rio%20Grande%20Blvd%20NW%2C%20Albuquerque%2C%20NM%2087104%2C%20USA!5e0!3m2!1sen!2sus!4v1732062408809!5m2!1sen!2sus"
+                                                    width="200"
+                                                    height="150"
+                                                    style="border:0; border-radius: 5px; margin-right: 15px;"
+                                                    allowfullscreen=""
+                                                    loading="lazy"
+                                                    referrerpolicy="no-referrer-when-downgrade">
+                                                </iframe>
+                                                <div class="location-address-and-phone-number">
+                                                    <a href="https://www.google.com/maps?q=800+Rio+Grande+Blvd+NW,+Albuquerque,+NM+87104" target="_blank" class="text-primary">
+                                                        <i class="fa fa-map-marker"></i> 800 Rio Grande Blvd NW, Albuquerque, NM 87104
+                                                    </a><br>
+                                                    <a href="tel:+15052430993" class="text-dark"><i class="fa fa-phone"></i> 505-243-0993</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Hotel Encanto Gift Shop -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingThree">
+                                            <button id="nav-menu-redirect-3" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                <h4>Hotel Encanto Gift Shop</h4>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body d-flex align-items-start" style="background: white; padding: 10px; border-radius: 5px;">
+                                                <!-- Google Map Embed -->
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3371.9664829090916!2d-106.74296322435637!3d32.3127541738611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86de3d5959d37aa9%3A0x612e7dd968db120b!2s705%20S%20Telshor%20Blvd%2C%20Las%20Cruces%2C%20NM%2088011%2C%20USA!5e0!3m2!1sen!2sus!4v1732062340917!5m2!1sen!2sus"
+                                                    width="200"
+                                                    height="150"
+                                                    style="border:0; border-radius: 5px; margin-right: 15px;"
+                                                    allowfullscreen=""
+                                                    loading="lazy"
+                                                    referrerpolicy="no-referrer-when-downgrade">
+                                                </iframe>
+                                                <div class="location-address-and-phone-number">
+                                                    <a href="https://www.google.com/maps?q=705+South+Telshor+Blvd,+Las+Cruces,+NM+88011" target="_blank" class="text-primary">
+                                                        <i class="fa fa-map-marker"></i> 705 South Telshor Blvd, Las Cruces, NM 88011
+                                                    </a><br>
+                                                    <a href="tel:+15755324226" class="text-dark"><i class="fa fa-phone"></i> 575-532-4226</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Old Town T-Shirt Company -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingFour">
+                                            <button id="nav-menu-redirect-4" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                                <h4>Old Town T-Shirt Company</h4>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body d-flex align-items-start" style="background: white; padding: 10px; border-radius: 5px;">
+                                                <!-- Google Map Embed -->
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6528.235391833475!2d-106.67079083068846!3d35.103771865979404!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87220cd4a8f1963d%3A0x3e581de44ed9884f!2sOld%20Town%20T-Shirt%20Co!5e0!3m2!1sen!2sus!4v1732062099062!5m2!1sen!2sus"
+                                                    width="200"
+                                                    height="150"
+                                                    style="border:0; border-radius: 5px; margin-right: 15px;"
+                                                    allowfullscreen=""
+                                                    loading="lazy"
+                                                    referrerpolicy="no-referrer-when-downgrade">
+                                                </iframe>
+                                                <div class="location-address-and-phone-number">
+                                                    <a href="https://www.google.com/maps?q=323+Romero+St+NW+Ste+14,+Albuquerque,+NM+87104" target="_blank" class="text-primary">
+                                                        <i class="fa fa-map-marker"></i> 323 Romero St. NW Ste 14, Albuquerque, NM 87104
+                                                    </a><br>
+                                                    <a href="tel:+15052436393" class="text-dark"><i class="fa fa-phone"></i> 505-243-6393</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Wild West T's -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingFive">
+                                            <button id="nav-menu-redirect-5" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                                <h4>Wild West T's and Gifts</h4>
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body d-flex align-items-start" style="background: white; padding: 10px; border-radius: 5px;">
+                                                <!-- Google Map Embed -->
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d816.0943586338117!2d-106.67016483037838!3d35.097285095560025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87220cd34e4d13ed%3A0x736d736462e03a5e!2sWild%20West%20T&#39;s%20%26%20Gifts!5e0!3m2!1sen!2sus!4v1732062159809!5m2!1sen!2sus"
+                                                    width="200"
+                                                    height="150"
+                                                    style="border:0; border-radius: 5px; margin-right: 15px;"
+                                                    allowfullscreen=""
+                                                    loading="lazy"
+                                                    referrerpolicy="no-referrer-when-downgrade">
+                                                </iframe>
+                                                <div class="location-address-and-phone-number">
+                                                    <a href="https://www.google.com/maps?q=401+San+Felipe+NW+Ste+A,+Albuquerque,+NM+87104" target="_blank" class="text-primary">
+                                                        <i class="fa fa-map-marker"></i> 401 San Felipe NW Ste A, Albuquerque, NM 87104
+                                                    </a><br>
+                                                    <a href="tel:+15052479200" class="text-dark"><i class="fa fa-phone"></i> 505-247-9200</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--our artist section start-->
+        <div class="hm_artist_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <h1 class="hm_heading hm_heading_01"><span class="hm_color">Our</span> Staff</h1>
+                    </div>
+                </div>
+                <div class="row">
+                   
+                        <div class="col-lg-6 col-md-6">
+                            <div class="hm_artist_box">
+                                <div class="artist_img">
+                                    <img src="assets/images/staff/placeholder1.png" alt="handmade-craft-artist1" class="img-fluid" />
+                                </div>
+                                <div class="artist_data">
+                                    <h3>Melisa Bush</h3>
+                                    <p class="artist_post">Store Manager</p>
+                                    <p class="artist_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempus erat, et luctus quam. Maecenas cursus porta tortor, vel consectetur ante volutpat imperdiet. </p>
+                                    <ul class="artist_social">
+                                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="hm_artist_box">
+                                <div class="artist_img">
+                                    <img src="assets/images/staff/placeholder2.png" alt="handmade-craft-artist2" class="img-fluid" />
+                                </div>
+                                <div class="artist_data">
+                                    <h3>Martina Carlo</h3>
+                                    <p class="artist_post">Store Manager</p>
+                                    <p class="artist_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempus erat, et luctus quam. Maecenas cursus porta tortor, vel consectetur ante volutpat imperdiet. </p>
+                                    <ul class="artist_social">
+                                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="hm_artist_box artist_right_image">
+                                <div class="artist_data">
+                                    <h3>Phillip James</h3>
+                                    <p class="artist_post">Store Manager</p>
+                                    <p class="artist_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempus erat, et luctus quam. Maecenas cursus porta tortor, vel consectetur ante volutpat imperdiet. </p>
+                                    <ul class="artist_social">
+                                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="artist_img">
+                                    <img src="assets/images/staff/placeholder4.png" alt="handmade-craft-artist3" class="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="hm_artist_box artist_right_image">
+                                <div class="artist_data">
+                                    <h3>Kayla Broad</h3>
+                                    <p class="artist_post">Store Manager</p>
+                                    <p class="artist_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempus erat, et luctus quam. Maecenas cursus porta tortor, vel consectetur ante volutpat imperdiet. </p>
+                                    <ul class="artist_social">
+                                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="artist_img">
+                                    <img src="assets/images/staff/placeholder3.png" alt="handmade-craft-artist4" class="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--happy customer sevtion start-->
+		<div class="hm_testimonial_wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<h1 class="hm_heading"><span class="hm_color">Our</span> happy customers</h1>
+					</div>
+				</div>
+                <div class="hm_test_inner">
+				<div class="row">
+					
+						<div class="col-lg-4 col-md-4">
+							<div class="hm_testi_box">
+								<div class="hm_test_img">
+									<img src="assets/images/staff/small-review1.jpg" alt="handmade-craft-customer1" class="img-fluid" />
+								</div>
+								<h2>John G</h2>
+								<p>When my son and I visit my mother, this is always a must stop spot for T's, hats and sweat shirts. I came here looking for the name of the place as a friend will be visiting soon. Highly recommended, best prices on the square, or Old Old Town.
+                                </p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4">
+							<div class="hm_testi_box">
+								<div class="hm_test_img">
+									<img src="assets/images/staff/small-review2.jpg" alt="handmade-craft-customer2" class="img-fluid" />
+								</div>
+								<h2>The Lyle</h2>
+								<p>The woman working here is an incredibly thoughtful ball of energy, exuding boundless enthusiasm and serving as a walking encyclopedia of knowledge on all things Breaking Bad and Albuquerque. Her expertise and passion for the subject are truly impressive. Greetings from Seattle! 
+                                </p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4">
+							<div class="hm_testi_box">
+								<div class="hm_test_img">
+									<img src="assets/images/staff/small-review3.jpg" alt="handmade-craft-customer3" class="img-fluid" />
+								</div>
+								<h2>Stephen S</h2>
+								<p>We purchased a shirt  at Old Town T-Shirt Co. The guy behind the counter was helpful and suggested what has become one of my favorite souvenir shirts. Thanks guy-behind-the-counter!  :-) 
+                                </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        <!--our blog section start-->
+        <div class="hm_news_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <h1 class="hm_heading hm_heading_01"><span class="hm_color">Our </span>latest blog</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                        <div class="col-lg-4 col-md-12">
+                            <div class="hm_news_box">
+                                <div class="hm_news_img">
+                                    <img src="assets/images/blog/Dried-Chillies.jpg" alt="handmade-craft-blog1" class="img-fluid">
+                                    <div class="news_img_overlay"></div>
+                                    <div class="overlay_buttons">
+                                        <a class="popup-iframe" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="hm_news_data">
+                                    <h3><a href="#">DIY Dried Chillies</a></h3>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> admin</a></li>
+                                        <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>Nov 20 2024</a></li>
+                                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>picture</a></li>
+                                    </ul>
+                                    <p>Learn how to dry your own chillies at home and add a touch of New Mexico flavor to your cooking.</p>
+                                    <a href="#" class="news_btn">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-12">
+                            <div class="hm_news_big_post">
+                                <img src="assets/images/blog/Clay-Pots.jpg" alt="handmade-craft-blog" class="img-fluid" />
+                                <div class="hm_blog_overlay_data">
+                                    <div class="news_data">
+                                        <span class="hm_blog_date">Nov 13 2024</span>
+                                        <h2><a href="#">The Best Clay Pottery in New Mexico</a></h2>
+                                        <p>What to look for when shopping for quality New Mexico Clay Pottery. Do not settle for anything less!</p>
+                                        <div class="blog_admin">Posted by <span class="hm_orange">william harry</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="hm_news_box">
+                                <div class="hm_news_img">
+                                    <img src="assets/images/blog/Breaking-Bad-Tours.jpg" alt="handmade-craft-blog2" class="img-fluid">
+                                    <div class="news_img_overlay"></div>
+                                    <div class="overlay_buttons">
+                                        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="hm_news_data">
+                                    <h3><a href="#">The Best Breaking Bad/Better Call Saul Tour</a></h3>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> admin</a></li>
+                                        <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>Nov 6 2024</a></li>
+                                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>picture</a></li>
+                                    </ul>
+                                    <p>Explore the iconic filming locations that made Breaking Bad and its spinoff Better Call Saul must-watch shows right here in Albuquerque.</p>
+                                    <a href="#" class="news_btn">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="hm_news_box">
+                                <div class="hm_news_img">
+                                    <img src="assets/images/blog/Kachina_Dolls.jpg" alt="handmade-craft-blog3" class="img-fluid">
+                                    <div class="news_img_overlay"></div>
+                                    <div class="overlay_buttons">
+                                        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="hm_news_data">
+                                    <h3><a href="#">What are Kachina Dolls?</a></h3>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> admin</a></li>
+                                        <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 12 june 2021</a></li>
+                                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>picture</a></li>
+                                    </ul>
+                                    <p>Uncover the history and cultural significance of these intricate Native American art pieces.</p>
+                                    <a href="#" class="news_btn">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="hm_news_box">
+                                <div class="hm_news_img">
+                                    <img src="assets/images/blog/dreamcatchers.jpg" alt="handmade-craft-blog4" class="img-fluid">
+                                    <div class="news_img_overlay"></div>
+                                    <div class="overlay_buttons">
+                                        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="hm_news_data">
+                                    <h3><a href="#">DIY Dream Catchers</a></h3>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> admin</a></li>
+                                        <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 12 june 2021</a></li>
+                                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>picture</a></li>
+                                    </ul>
+                                    <p>Create your own dream catcher with this easy guide inspired by Native American traditions.</p>
+                                    <a href="#" class="news_btn">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--our partners section start-->
+        <div class="hm_partners_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <h1 class="hm_heading">Our clients</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="hm_partners_slider">
+                            <div class="owl-carousel owl-theme test_slider">
+                                <div class="item"><img src="assets/images/brand-slider/brand1.png" alt=""></div>
+                                <div class="item"><img src="assets/images/brand-slider/brand2.png" alt=""></div>
+                                <div class="item"><img src="assets/images/brand-slider/brand3.png" alt=""></div>
+                                <div class="item"><img src="assets/images/brand-slider/brand4.png" alt=""></div>
+                                <div class="item"><img src="assets/images/brand-slider/brand5.png" alt=""></div>
+                                <div class="item"><img src="assets/images/brand-slider/brand1.png" alt=""></div>
+                                <div class="item"><img src="assets/images/brand-slider/brand2.png" alt=""></div>
+                                <div class="item"><img src="assets/images/brand-slider/brand3.png" alt=""></div>
+                                <div class="item"><img src="assets/images/brand-slider/brand4.png" alt=""></div>
+                                <div class="item"><img src="assets/images/brand-slider/brand5.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer start-->
+        <div class="hm_footer_wrapper">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <!-- Column 1 -->
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="hm_footer_box">
+                            <img src="assets/images/logo/silver-logo-139by69.webp" alt="handmade-craft-logo" class="img-fluid">
+                            <p class="footer_about_para">
+                                Locally owned and based in New Mexico, Santa Fe Sterling brings you authentic gifts, custom apparel, and wholesale opportunities with a hometown touch.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="hm_footer_box">
+                            <h3 class="footer_heading">Our Warehouse</h3>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <div class="hm_footer_information">
+                                        <span class="footer_icon"><i class="fa fa-map-marker" aria-hidden="true"></i> </span>
+                                        <a href="#"><p class="foo_con_para">9440 San Mateo Blvd Ste M, Albuquerque, NM 87113</p></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="hm_footer_information">
+                                        <span class="footer_icon"><i class="fa fa-phone" aria-hidden="true"></i> </span>
+                                        <a href="tel:+5058220900"><p class="foo_con_para">(505) 822-0900</p></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="hm_footer_information">
+                                        <span class="footer_icon"><i class="fa fa-map" aria-hidden="true"></i> </span>
+                                        <a href="#"><p class="foo_con_para">More Locations</p></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Column 3 -->
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="hm_footer_box">
+                            <h3 class="footer_heading">Navigation</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Our Locations</a></li>
+                                <li><a href="#">Our Products</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!--bottom footer start-->
+        <div class="hm_bottom_footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <p>Copyright &copy; 2024 Santa Fe Sterling. Designed by Reputable Image</p>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <ul class="footer_so_icons">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+		    <!--main wrapper-->
+    </div>
+</div>
+  
+ <!-- JS code from box-four.html-->
+      <!--script-->
+      <script type="text/javascript" src="assets/js/navigation-menu-on-page-linking.js"> </script>
+      <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="assets/js/wow.min.js"></script>
+      <script type="text/javascript" src="assets/js/plugin/owl/owl.carousel.min.js"></script>
+      <script type="text/javascript" src="assets/js/header-animation-javascript.js"></script>
+      <!--Revolution slider js-->
+      <script src="assets/js/plugin/revolution/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+      <script src="assets/js/plugin/revolution/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+      <script src="assets/js/plugin/revolution/js/revolution.extension.navigation.min.js" type="text/javascript"></script>
+      <script src="assets/js/plugin/revolution/js/revolution.extension.slideanims.min.js" type="text/javascript"></script>
+      <script src="assets/js/plugin/revolution/js/revolution.extension.layeranimation.min.js" type="text/javascript"></script>
+      <script src="assets/js/plugin/revolution/js/revolution.extension.parallax.min.js" type="text/javascript"></script>
+      <script src="assets/js/plugin/revolution/js/revolution.extension.kenburn.min.js" type="text/javascript"></script>
+  
+      <script type="text/javascript" src="assets/js/switcher.js"></script>
+      <!--master js-->
+      <script type="text/javascript" src="assets/js/custom.js"></script>
+</body>
+</html>
